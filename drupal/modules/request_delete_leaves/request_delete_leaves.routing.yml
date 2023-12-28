@@ -1,0 +1,16 @@
+request_delete_leaves.display_leaves:
+  path: '/request-delete-leaves'
+  defaults:
+    _controller: '\Drupal\request_delete_leaves\Controller\RequestDeleteLeavesController::displayLeaves'
+    _title: 'Delete Request Leaves'
+  requirements:
+    _permission: 'access content'
+
+
+request_delete_leaves.delete_request_leaves:
+  path: '/delete-leaves/{id}'
+  defaults:
+    _controller: '\Drupal\request_delete_leaves\Controller\RequestDeleteLeavesController::deleteLeaves'
+    _title: 'Delete Details'
+  requirements:
+    _permission: 'access content'

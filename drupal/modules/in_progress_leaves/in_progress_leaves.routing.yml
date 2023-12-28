@@ -1,0 +1,34 @@
+in_progress_leaves.display_leaves:
+  path: '/in-progress-leaves'
+  defaults:
+    _controller: '\Drupal\in_progress_leaves\Controller\InProgressLeavesController::displayLeaves'
+    _title: 'In Progress Leaves'
+  requirements:
+    _permission: 'access content'
+
+
+in_progress_leaves.view_leave:
+  path: '/view-leave/{id}'
+  defaults:
+    _controller: '\Drupal\in_progress_leaves\Controller\InProgressLeavesController::viewLeave'
+    _title: 'Leave Details'
+  requirements:
+    _permission: 'access content'
+
+
+in_progress_leaves.approve_leave:
+  path: '/approve-leave/{id}'
+  defaults:
+    _controller: '\Drupal\in_progress_leaves\Controller\InProgressLeavesController::approveLeave'
+    _title: 'Approve Leave'
+  requirements:
+    _permission: 'access content'
+
+
+in_progress_leaves.deny_leave:
+  path: '/deny-leave/{id}'
+  defaults:
+    _controller: '\Drupal\in_progress_leaves\Controller\InProgressLeavesController::denyLeave'
+    _title: 'Deny Leave'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+workforce_monitoring:
+  version: 1.x
+  css:
+    theme:
+      css/workforce_monitoring.css: {}
