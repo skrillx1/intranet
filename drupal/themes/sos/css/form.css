@@ -1,0 +1,79 @@
+#edit-field-status-wrapper{
+    display: none !important;
+  }
+  .js-form-type-vertical-tabs, .js-hide, .field--type-language{
+    display: none !important;
+  }
+  .visually-hidden{
+    display: none !important;
+  }
+  #edit-field-supporting-documents-0--description{
+    display: none !important;
+  }
+
+
+
+#block-sos-page-title{
+  padding: 16px 64px;
+}
+
+  .node-file-for-leave-form div{
+    padding: 5px;
+    font-size: medium;
+    font-weight: 700;
+  }
+  .node-file-for-leave-form{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr;
+  }
+    .node-file-for-leave-form .field--name-field-type-of-leave{
+        grid-column: 1 / span 1;
+    }
+    .node-file-for-leave-form .field--widget-string-textarea{
+        grid-column: 1 / span 3;
+    }
+    .node-file-for-leave-form #edit-actions{
+        grid-column: 1 / span 1;
+    }
+    .node-file-for-leave-form .edit-field-type-of-leave{
+        width: 100%;
+        margin: 0px 50px 75px;
+    }
+    .node-file-for-leave-form #edit-actions .form-submit{
+      border-radius: 4px;
+border: 1px solid #000;
+background: linear-gradient(0deg, #399BFF 0%, #399BFF 100%), linear-gradient(0deg, #878181 0%, #878181 100%), #6598CB;
+      }
+      .field--type-datetime,
+      .field--name-field-supporting-documents{
+        grid-row: 3 / span 1;  
+      }
+      .node-form input, 
+      .node-form select {
+        width: 300px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; 
+      } 
+
+      .form-item-field-reason-please-specify--0-value,
+      .form-item-field-reason-please-specify--0-value .js-text-full{
+        width: 100%;
+      }
+
+      .node-file-for-leave-form #edit-actions .form-submit{
+        width: 40%;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      #edit-field-start-date-wrapper h4,
+      #edit-field-end-date-wrapper h4,
+      .form-item-field-reason-please-specify--0-value label{
+        margin-left: 25px;
+      }

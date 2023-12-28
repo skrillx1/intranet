@@ -1,0 +1,66 @@
+#edit-field-status-wrapper{
+  display: none !important;
+  
+}
+.js-form-type-vertical-tabs, .js-hide{
+  display: none !important;
+}
+.js-form-item-field-type-of-leave-value .form-select{
+  display: unset !important;
+  width: unset !important;
+  border: solid black 1px; 
+}
+.form-wrapper{
+display: block;
+}
+label{
+  font-weight: bold;
+}
+
+.views-exposed-form .button {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+/* view spicific leave */
+.article-leave{
+  width: 700px;
+}
+.node__content > div{
+  padding: 12px 24px;
+}
+.leave-reason .leave-value{
+  border: 1px solid #000;
+  padding: 12px 24px;
+  width: 600px;
+  color:#000;
+}
+.leave-status .leave-value{
+  color: rgb(0, 0, 0);
+  padding: 5px;
+}
+/* Apply Leave */
+
+/* svg .bi .bi-eye{
+  border-radius: 50%;
+  background: rgba(5, 105, 204, 0.80);
+}
+svg .bi .bi-pencil{
+  border-radius: 50%;
+  background: #438B6A;
+}
+svg .bi .bi-trash3{
+  border-radius: 50%;
+  background: #D35757;
+} */

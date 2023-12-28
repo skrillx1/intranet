@@ -1,0 +1,25 @@
+.image-back{
+  background: linear-gradient(40deg, #00296C 17.02%, #7EACF8 66.91%, #E2EAF7 102.46%);
+  width: 1440px;
+height: 950px;
+margin: auto;
+justify-content: center;
+}
+#user-login-form{
+  border: 1px solid #000000;
+  width: 500px;
+  position: absolute;
+  right: 5%;
+  padding: 10px;
+  top:20%;
+}
+#user-login-form .js-form-item{
+  justify-content: center;
+margin: 10px;
+}
+#user-login-form #edit-name{
+  width: 70%;
+}
+.form-actions{
+  right: 20%;
+}

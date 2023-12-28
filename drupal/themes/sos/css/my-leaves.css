@@ -1,0 +1,38 @@
+.responsive-enabled tbody tr td a{
+    padding: 0px 5px;
+  }
+  
+svg.bi.bi-eye{
+    border-radius: 50%;
+    background: rgba(5, 105, 204, 0.80);
+    padding: 5px;
+    color: white;
+}
+svg.bi.bi-pencil{
+    border-radius: 50%;
+    background: rgba(67, 139, 106, 0.80);
+    padding: 5px;
+    color: white;
+}
+svg.bi.bi-trash3{
+    border-radius: 50%;
+    background: rgba(244, 67, 54, 0.80);
+    padding: 5px;
+    color: white;
+}
+.my-leaves-button{
+    float: right;
+}
+.my-leaves-button{
+    background: #3586D5;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.my-leaves-button:hover {
+    color:white;
+}

@@ -1,0 +1,50 @@
+/* Log In Button*/
+#block-sos-userlogin ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-flex;
+  }
+
+  #block-sos-userlogin li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #block-sos-userlogin li a:hover {
+    color: #111;
+  }
+  #block-sos-userlogin{
+    float: right;
+    margin-top: 10px;
+  }
+
+/* Head Menu */
+#block-sos-headmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-flex;
+  }
+
+  #block-sos-headmenu li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #block-sos-headmenu li a:hover {
+    color: #111;
+  }
+  #block-sos-headmenu{
+    float: right;
+    margin-top: 10px;
+  }
+  #block-sos-headmenu span{
+    display: none !important;
+  }

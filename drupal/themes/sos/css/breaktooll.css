@@ -1,0 +1,30 @@
+#block-sos-content{
+    overflow-x: auto;
+    padding: 10px 50px;
+}
+.OBlogs{ 
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+}
+.OBlogs span{ 
+    text-align: right;
+}
+.logs{
+    text-align: right;
+}
+form#workforce-monitoring-account-form{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+/* #onBreaksContent tr {
+    background-color: #00ffcc;
+} */
+.fade-yellow {
+    background-color: #ffffcc;
+}
+/* tr.break-monitor-row.gold-yellow {
+    background-color: #ffdd00;
+} */

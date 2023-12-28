@@ -1,0 +1,32 @@
+.user--name-user-picture .user__label,
+  .user--name-field-display-name-full-name- .user__label,
+  .js-form-type-item,
+  .user--name-field-position .user__label{
+    display: none !important;
+  }
+ .css-grid-layout{
+  padding: 10px;
+ }
+  .contextual-region{
+    padding: 10px;
+  }
+  .layout__region{
+    margin: auto;
+  }
+  .layout-inner-content{
+    padding: 10px;
+    border: 1px solid black;
+    background-color:skyblue;
+  }
+  .user__label,
+  .user__item{
+    text-align: center;
+    padding: 0px;
+  }
+  .user__label{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .user__item img{
+    border-radius: 50%;
+  }

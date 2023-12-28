@@ -1,0 +1,73 @@
+#edit-field-status-wrapper{
+  display: none !important;
+}
+.js-form-type-vertical-tabs, .js-hide, .field--type-language{
+  display: none !important;
+}
+.visually-hidden{
+  display: none !important;
+}
+#edit-field-supporting-documents-0--description{
+  display: none !important;
+}
+
+#block-sos-content{
+  justify-content: center;
+}
+.node-file-for-leave-form div{
+  padding: 10px;
+  font-size: medium;
+  font-weight: 700;
+}
+.node-file-for-leave-form{
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr;
+}
+.node-file-for-leave-form .field--name-field-type-of-leave, 
+.node-file-for-leave-form .field--widget-string-textarea{
+  grid-column: 1 / span 3;
+}
+.node-file-for-leave-form #edit-actions{
+  grid-column: 1 / span 1;
+}
+.node-file-for-leave-form .edit-field-type-of-leave{
+  width: 100%;
+  margin: 0px 50px 75px;
+}
+
+.node-file-for-leave-form .field--type-datetime{
+  border-radius: 8px;
+  padding: 0;
+  height: 70px;
+  margin: 25px 50px 75px;
+}
+.node-file-for-leave-form #edit-actions .form-submit:hover {
+  background: rgb(0,3,255);
+}
+.node-form input, 
+.node-form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+} 
+
+.form-item-field-reason-please-specify--0-value{
+  width: 100%;
+}
+
+.node-file-for-leave-form #edit-actions .form-submit{
+  width: 40%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+#edit-field-start-date-wrapper h4,
+#edit-field-end-date-wrapper h4{
+  margin-left: 25px;
+}

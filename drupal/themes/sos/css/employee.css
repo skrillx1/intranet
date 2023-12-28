@@ -1,0 +1,46 @@
+.js-form-item-field-type-of-leave-value{
+    margin-top: 10px;
+}
+
+#views-exposed-form-manage-leaves-page-1, 
+#views-exposed-form-employee-profiles-page-1,
+#workforce-monitoring-date-form{
+display: grid;
+grid-template-columns: auto auto auto;
+margin: auto;
+}
+/* Apply button */
+.js-form-submit{
+    padding: 2px 5px 2px 5px;
+}
+#edit-actions{
+float: right;
+}
+#edit-submit-employee-profiles, #edit-submit-manage-leaves{
+    background-color: white; 
+    color: black; 
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 2px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+.js-form-type-textfield , #edit-actions{
+    padding: 10px;
+}
+
+/* input */
+.form-text{
+    border-radius: .375rem;
+    padding: 5px; 
+}
+
+.js-form-type-textfield .form-text{
+    margin-top: 0 !important;
+    font-size: unset !important;
+    color: unset !important;
+    border: solid black 1px;
+    
+}
