@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8
+    container_name: mysql_${PROJECT_NAME}
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    env_file:
+      - ./.env
+    restart: unless-stopped
+    volumes:
+      - "${DATABASE_DIR}/${PROJECT_NAME}:/var/lib/mysql"
+    networks:
+      - ${PROJECT_NAME}-network
+    ports:
+      - "10001:3306"
+  drupal:
+    build: .
+    container_name: drupal${DRUPAL_VERSION}_${PROJECT_NAME}
+    restart: unless-stopped
+    networks:
+      - ${PROJECT_NAME}-network
+    volumes:
+      - "${BASE_DIR}:/opt/drupal/web"
+    ports:
+    - "30080:80"
+    env_file:
+      - ./.env
+networks:
+  intranet-network:
+    ipam:
+      driver: default
