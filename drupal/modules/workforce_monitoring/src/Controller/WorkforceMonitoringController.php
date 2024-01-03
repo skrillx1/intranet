@@ -42,9 +42,9 @@ class WorkforceMonitoringController extends ControllerBase {
 
     return [
       'date_form' => $dateForm,
-      '#markup' => $button_prefix . $this->t(
-        '<br><br><h3>' . $newFormattedDate . '</h3><h4>Over-Break Logs</h4>Employees Over Break: <strong>' . $totalOverBreakRows . '</strong>' . $overBreakTableMarkup .
-        '<br><h4>Logs Summary</h4>Total Number of Employees Logged In: <strong>' . $totalRows . '</strong>' . $mainTableMarkup
+      '#markup' => $this->t(
+        '<div class="over-break-head">' . $button_prefix . '<br><h3>' . $newFormattedDate . '</h3><h4>Over-Break Logs</h4>Employees Over Break: <strong>' . $totalOverBreakRows . '</strong></div>' . $overBreakTableMarkup .
+        '<div class="all-employee"><br><h4>Logs Summary</h4>Total Number of Employees Logged In: <strong>' . $totalRows . '</strong> </div>' . $mainTableMarkup
       ),
       '#cache' => [
         'max-age' => 0,
@@ -70,7 +70,7 @@ class WorkforceMonitoringController extends ControllerBase {
             $current_date = date('Y-m-d', strtotime('-1 day'));
         }
     }
-  
+
     $AccountForm = $this->formBuilder()->getForm(AccountForm::class);
     $data = $this->fetchOnBreaksData($current_date);
 
@@ -82,16 +82,16 @@ class WorkforceMonitoringController extends ControllerBase {
     $button_markup = $button_link->toRenderable();
     $button_prefix = \Drupal::service('renderer')->renderPlain($button_markup);
 
-    $refreshableContent = '<div id="refreshableContent">'
+    $refreshableContent = '<div id="refreshableContent">' . $button_prefix
     . '<div class="legend"><strong>Legend:</strong><span class="warning">Warning</span>'
-    . '<span class="break1">1st Break</span><span class="break2">2nd Break</span><span class="lunch">Lunch</span></div>'
+    . '<span class="break1">1st Break</span><span class="break2">2nd Break</span><span class="lunch">Lunch</span></div>'  
     . '<div id="onBreaksContent"><strong>' . $data['todayDate'] . '</strong><br>Employees Over Break: <strong>' . $totalOverBreakRows . '</strong>'
     . $overBreakTableMarkup
     . '</div></div>';
 
     return [
       'account_form' => $AccountForm,
-      '#markup' => $button_prefix . $refreshableContent,
+      '#markup' => $refreshableContent,
       '#attached' => [
         'library' => [
           'workforce_monitoring/onBreaksRefresh',
@@ -102,7 +102,6 @@ class WorkforceMonitoringController extends ControllerBase {
       ],
     ];
   }
-
   /**
    * Helper function to fetch breaks data.
    *
@@ -215,12 +214,14 @@ class WorkforceMonitoringController extends ControllerBase {
       '#theme' => 'table',
       '#header' => $overBreakTableHeader,
       '#rows' => $overBreakRows,
+      '#attributes' => ['id' => ['ob-table']],
     ];
 
     $mainTableRows = [
       '#theme' => 'table',
       '#header' => $mainTableHeader,
       '#rows' => $rows,
+      '#attributes' => ['id' => ['main-table']],
     ];
 
     return [
@@ -284,7 +285,6 @@ class WorkforceMonitoringController extends ControllerBase {
       $breakEnd = null;
       $warningFlag = false;
 
-
       if ($row->BrkIn1 !== null && $row->BrkOut1 === null) {
         $currentStatus = '1ST BREAK';
         $isOnBreak = true;
@@ -300,8 +300,9 @@ class WorkforceMonitoringController extends ControllerBase {
         $seconds = $duration % 60;
         $durationFormatted = sprintf('%02d:%02d:%02d', $hours, $minutes, $seconds);
 
-        if ($minutes > 13) {
+        if ($minutes >= 13) {
           $warningFlag = true;
+
         }
       } 
       
@@ -320,8 +321,9 @@ class WorkforceMonitoringController extends ControllerBase {
         $seconds = $duration % 60;
         $durationFormatted = sprintf('%02d:%02d:%02d', $hours, $minutes, $seconds);
 
-        if ($minutes > 13) {
+        if ($minutes >= 13) {
           $warningFlag = true;
+        
         }
       }
 
@@ -340,22 +342,24 @@ class WorkforceMonitoringController extends ControllerBase {
         $seconds = $duration % 60;
         $durationFormatted = sprintf('%02d:%02d:%02d', $hours, $minutes, $seconds);
 
-        if ($minutes > 55) {
+        if ($minutes >= 55) {
           $warningFlag = true;
-          
+
         }
       }
       
       if ($isOnBreak === true) {
+   
         $overBreakRows[] = [
-
           'Name' => $row->FName . " " . $row->LName,
           'Department' => $row->AcctName,
           'Start' => $breakStart,
           'End' => $breakEnd,
           'Duration' => $durationFormatted,
           'Status' => $currentStatus,
+          'warning' => $warningFlag,
         ];
+        
       }
     }
 
@@ -370,10 +374,12 @@ class WorkforceMonitoringController extends ControllerBase {
 
     $overBreakTableRows = [
       '#theme' => 'table',
+      '#attributes' => ['id' => ['break']],
       '#header' => $overBreakTableHeader,
       '#rows' => $overBreakRows,
+      
     ];
-
+    
     return [
       'todayDate' => $todayDate,
       'overBreakRows' => $overBreakRows,

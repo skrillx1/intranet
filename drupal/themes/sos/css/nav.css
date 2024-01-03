@@ -4,10 +4,10 @@
   margin-top: 120px;
 }
 .region--primary-menu li a {
-padding: 8px 8px 8px 16px;
+padding: 8px 8px 8px 35px;
 text-decoration: none;
 font-size: 16px;
-font-weight: 700;
+font-weight: 600;
 color: black;
 display: block;
 }
@@ -20,14 +20,13 @@ margin-left: 0;
 margin-bottom: 0;
 padding: 0;
 }
-
-.region--primary-menu li a:hover {
-    background-color: blue;
-    color:white;
+.region--primary-menu li:hover{
+  background: rgb(9,9,121);
+  background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(255,255,255,0) 6%);
 }
-.region--primary-menu li a:active {
-background-color: blue;
-color:white;
+.region--primary-menu li a:hover {
+    background-color: #FFF;
+    color: black;
 }
 span::after{
     content: '\a';
@@ -58,5 +57,24 @@ span::after{
   text-decoration: none;
   font-size: 18px;
   font-weight: 700;
+  color: black;
+}
+ /* leave_page */
+ #block-sos-hrleavepage ul,
+ #block-sos-userleavepage ul{
+  display: flex;
+  list-style-type: none;
+}
+#block-sos-hrleavepage li,
+#block-sos-userleavepage li {
+  padding: 5px 10px;
+}
+#block-sos-hrleavepage li:hover,
+#block-sos-userleavepage li:hover {
+  background: white;
+}
+#block-sos-hrleavepage li a,
+#block-sos-userleavepage li a {
+  text-decoration: none;
   color: black;
 }

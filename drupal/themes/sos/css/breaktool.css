@@ -1,0 +1,77 @@
+#block-sos-content{
+    overflow-x: auto;
+    padding: 10px 50px;
+}
+.OBlogs{ 
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+}
+.OBlogs span{ 
+    text-align: right;
+}
+.logs{
+    text-align: right;
+}
+form#workforce-monitoring-account-form{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.content--region a{
+    text-decoration: none;
+    color: white;
+    padding: 2px 5px;
+    float: right;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: blue;
+}
+#refreshableContent .legend{
+    display: flex;
+    float: inline-end;
+    margin-right: 50px;
+}
+.legend strong{
+    margin-right: 5px;
+}
+.legend span{
+    border: 1px solid black;
+    margin-right: 3px;
+    padding: 0px 5px;
+}
+.warning{
+    background-color: #FF7575;
+    color: #ffffff;
+    font-weight: bold;
+}
+.break1{
+    background-color: #FFFDC9;
+}
+.break2{
+    background-color: #ffec5f;
+}
+.lunch{
+    background-color: #A8FECA;
+}
+#onBreaksContent td:last-child{
+    display: none;
+    visibility: hidden;
+}
+.break-blink{
+	-webkit-animation: pulse 400ms infinite alternate;
+	        animation: pulse 400ms infinite alternate;
+}
+@-webkit-keyframes pulse {
+	0% { background-color: #FF7575;
+            color:white; }
+	100% { background-color: #ffffff;
+        color:red; }
+}
+@keyframes pulse {
+	0% { background-color: #FF7575;
+             color:white; }
+	100% { background-color: #ffffff;
+        color:red; }
+}

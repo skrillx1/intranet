@@ -53,8 +53,8 @@ class AllLeavesController extends ControllerBase {
             $approveUrl = Url::fromRoute('all_leaves.approve_leave', ['id' => $result->id]);
             $denyUrl = Url::fromRoute('all_leaves.deny_leave', ['id' => $result->id]);
 
-            $approveLink = ['#markup' => $approve_disabled ? $this->t('<span class="approve-link disabled">Approve</span>') : Link::fromTextAndUrl($this->t('Approve'), $approveUrl)->toString()];
-            $denyLink = ['#markup' => $deny_disabled ? $this->t('<span class="deny-link disabled">Deny</span>') : Link::fromTextAndUrl($this->t('Deny'), $denyUrl)->toString()];
+            $approveLink = ['#markup' => $approve_disabled ? $this->t('<span class="approve-link disabled"><i class="bi bi-check2"></i></span>') : Link::fromTextAndUrl($this->t('<i class="bi bi-check2"></i>'), $approveUrl)->toString()];
+            $denyLink = ['#markup' => $deny_disabled ? $this->t('<span class="deny-link disabled"><i class="bi bi-x-lg"></i></span>') : Link::fromTextAndUrl($this->t('<i class="bi bi-x-lg"></i>'), $denyUrl)->toString()];
 
             $rows[] = [
                 $result->username,
@@ -65,18 +65,16 @@ class AllLeavesController extends ControllerBase {
                 $result->status,
                 [
                     'data' => [
-                        '#type' => 'container',
-                        'actions' => [
                             '#type' => 'container',
+                            '#attributes' => ['id' => ['leave']],
                             'view' => [
                                 '#type' => 'link',
-                                '#title' => $this->t('View'),
+                                '#title' => $this->t('<i class="bi bi-eye"></i>'),
                                 '#url' => $viewUrl,
                                 '#attributes' => ['class' => ['view-link']],
                             ],
                             'approve' => $approveLink,
                             'deny' => $denyLink,
-                        ],
                     ],
                 ],
             ];
@@ -94,7 +92,7 @@ class AllLeavesController extends ControllerBase {
 
         $button = [
             '#type' => 'link',
-            '#title' => $this->t('Request Leave'),
+            '#title' => $this->t('<i class="bi bi-megaphone"></i> Request Leave'),
             '#url' => Url::fromUri('http://localhost:30080/request-leave'),
             '#attributes' => ['class' => ['all-leaves-button']],
         ];

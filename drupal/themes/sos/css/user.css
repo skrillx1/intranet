@@ -4,19 +4,33 @@
   .user--name-field-position .user__label{
     display: none !important;
   }
+  .user--name-user-picture .user__item a{
+    background-color: unset;
+    border: unset;
+    float: unset;
+  }
+  .user--name-field-position .user__item,
+  .user--name-field-display-name-full-name- .user__item{
+    color: white;
+  }
  .css-grid-layout{
-  padding: 10px;
+    padding: 10px 20px;
+    background-color: white;
  }
   .contextual-region{
     padding: 10px;
   }
-  .layout__region{
+  .layout__region--content{
     margin: auto;
+    background: linear-gradient(0deg, #FFFFFF 50%, #0027FF 50%);
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
   }
   .layout-inner-content{
     padding: 10px;
-    border: 1px solid black;
-    background-color:skyblue;
+    border-radius: 5px;
+    border: 1px solid rgba(143, 143, 143, 0.75);
+    background: #85B5D8;
   }
   .user__label,
   .user__item{
@@ -27,6 +41,24 @@
     font-size: 14px;
     font-weight: 600;
   }
+  .user__item{
+    font-size: 16px;
+    font-weight: 600;
+  }
   .user__item img{
     border-radius: 50%;
+  }
+  .layout.layout--fourcol-section {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+ .layout__region--first,
+ .layout__region--second,
+ .layout__region--third{
+  border-right: 1px solid black;
+  }
+  .layout--fourcol-section .layout__region {
+    border-radius: unset;
   }

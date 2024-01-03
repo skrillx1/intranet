@@ -2,7 +2,7 @@ onBreaksRefresh:
   version: 1.x
   js:
     js/onBreaksRefresh.js: {}
-    https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js: {type: external, minified: true}
+    https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js: {type: external, minified: true}
   dependencies:
     - core/jquery
  

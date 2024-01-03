@@ -94,9 +94,10 @@ class MyLeavesController extends ControllerBase {
         $result->status,
         [
           'data' => [
-            '#type' => 'container',
-            'actions' => [
               '#type' => 'container',
+              '#attributes' => [
+                'class' => ['request-leave'],
+              ],
               'view' => [ 
                 '#type' => 'link',
                 '#title' => $this->t('View '),
@@ -107,7 +108,6 @@ class MyLeavesController extends ControllerBase {
               ],
               'edit' => $editLink,
               'delete' => $deleteLink,
-            ],
           ],
         ],
       ];
