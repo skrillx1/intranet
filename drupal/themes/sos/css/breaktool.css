@@ -2,24 +2,24 @@
     overflow-x: auto;
     padding: 10px 50px;
 }
-.OBlogs{ 
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-top: 20px;
+#ob-table td:nth-last-child(-n+3) {
+    color: red;
+    font-weight: bold;
 }
-.OBlogs span{ 
-    text-align: right;
+#ob-table,
+#main-table{
+    background-color: white;
+    border-radius: 5px;
 }
-.logs{
-    text-align: right;
-}
+
 form#workforce-monitoring-account-form{
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
 }
-.content--region a{
+#refreshableContent a,
+.over-break-head a{
     text-decoration: none;
     color: white;
     padding: 2px 5px;

@@ -1,3 +1,15 @@
-.block-sos-content article footer{
-    display: none !important;
+.Dashboard-welcome-user {
+    float: left;
+    display: flex;
+}
+.welcome-user {
+    font-weight: bold;
+}
+.Dashboard-welcome-user p {
+    margin-left: -400px;
+    margin-top: 60px;
+}
+.Dashboard-welcome-user h2 {
+    margin-top: 20px;
+    margin-left: 10px;
 }

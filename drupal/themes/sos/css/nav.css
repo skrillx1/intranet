@@ -27,6 +27,7 @@ padding: 0;
 .region--primary-menu li a:hover {
     background-color: #FFF;
     color: black;
+    border-left:10px solid #00f;
 }
 span::after{
     content: '\a';
@@ -61,20 +62,29 @@ span::after{
 }
  /* leave_page */
  #block-sos-hrleavepage ul,
- #block-sos-userleavepage ul{
+ #block-sos-userleavepage ul,
+ #block-sos-managerleavepage ul{
   display: flex;
   list-style-type: none;
+  padding-left: 50px;
 }
 #block-sos-hrleavepage li,
-#block-sos-userleavepage li {
+#block-sos-userleavepage li,
+#block-sos-managerleavepage li{
   padding: 5px 10px;
 }
 #block-sos-hrleavepage li:hover,
-#block-sos-userleavepage li:hover {
+#block-sos-userleavepage li:hover
+#block-sos-managerleavepage li:hover{
   background: white;
 }
 #block-sos-hrleavepage li a,
-#block-sos-userleavepage li a {
+#block-sos-userleavepage li a,
+#block-sos-managerleavepage li a{
   text-decoration: none;
   color: black;
+}
+.active {
+  background:white;
+  overflow:hidden;
 }

@@ -1,4 +1,8 @@
-.all-leaves-container .all-leaves-button {
+.all-leaves-container .all-leaves-button,
+ .my-leaves-container .my-leaves-button,
+ .in-progress-leaves-container .in-progress-leaves-button,
+ .request-delete-leaves-button,
+ .pending-leaves-button{
   text-decoration: none;
   color: white;
   border-radius: 5px;
@@ -7,24 +11,35 @@
   float: right;
   margin: 10px 5px;
 }
-
-.responsive-enabled #leave {
+.all-leaves-container,
+.my-leaves-container,
+.request-delete-leaves-container,
+.in-progress-leaves-container,
+.pending-leaves-container{
+  background-color: white;
+}
+.responsive-enabled #leave,
+.responsive-enabled .request-leave {
   display: flex;
 }
-.responsive-enabled #leave i {
+.responsive-enabled #leave i,
+.responsive-enabled .request-leave i {
   padding: 0px 5px;
   border-radius: 50%;
   font-size: 17px;
   color: white;
   margin-right: 3px;
 }
-.responsive-enabled #leave i.bi.bi-eye{
+.responsive-enabled #leave i.bi.bi-eye,
+.responsive-enabled .request-leave i.bi.bi-eye{
   background: rgba(5, 105, 204, 0.80);
 }
-.responsive-enabled #leave i.bi.bi-check2{
+.responsive-enabled #leave i.bi.bi-check2,
+.responsive-enabled .request-leave i.bi.bi-pencil{
   background: rgba(67, 139, 106, 0.80);
 }
-.responsive-enabled #leave i.bi.bi-x-lg{
+.responsive-enabled #leave i.bi.bi-x-lg,
+.responsive-enabled .request-leave  i.bi.bi-trash{
   background: rgba(244, 67, 54, 0.80);
 }
 

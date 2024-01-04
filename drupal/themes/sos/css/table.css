@@ -24,16 +24,6 @@ tr:nth-child(even){
 
 #onBreaksContent tbody tr{
     border-bottom: 1px solid #ddd;
-    /* background-color: #f2f2f2; */
 }
-/* CSS for red blinking animation */
-@keyframes blink-red-animation {
-    0% { background-color: inherit; }
-    50% { background-color: red; }
-    100% { background-color: inherit; }
-  }
-  
-  .blink-red {
-    animation: blink-red-animation 1s infinite; /* Change animation duration as needed */
-  }
+
 

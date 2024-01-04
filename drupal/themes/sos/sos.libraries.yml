@@ -17,6 +17,7 @@ global-styling:
       
   js:
     js/custom.js: {}
+    js/active.js: {type: external, modified: true}
     https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js: {type: external, modified: true}
     
   dependencies:
