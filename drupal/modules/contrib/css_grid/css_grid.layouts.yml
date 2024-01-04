@@ -1,0 +1,14 @@
+css_grid:
+  label: 'CSS Grid'
+  path: templates/layout/css-grid
+  template: css-grid
+  class: '\Drupal\css_grid\Plugin\Layout\CssGrid'
+  category: 'CSS Grid'
+  default_region: content
+  regions:
+    content:
+      label: Grid
+  icon_map:
+    - [square_one, square_two, square_three]
+    - [rectangle_vertical, rectangle_horizontal, rectangle_horizontal]
+    - [rectangle_vertical, square_four, square_five]

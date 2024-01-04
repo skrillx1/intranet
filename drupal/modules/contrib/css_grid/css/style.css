@@ -1,0 +1,31 @@
+.css-grid-layout .layout-builder__region {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.css-grid-layout .layout-builder__add-block {
+  align-content: center;
+  flex: 1;
+  justify-content: center;
+}
+#css-grid-columns-wrapper .area-size .input-container,
+#css-grid-rows-wrapper .area-size .input-container,
+#css-grid-gap-wrapper .area-size .input-container,
+#css-grid-columns-wrapper .form-actions,
+#css-grid-rows-wrapper .form-actions {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+#css-grid-columns-wrapper .form-actions,
+#css-grid-rows-wrapper .form-actions {
+  grid-template-columns: 150px 150px;
+}
+#css-grid-columns-wrapper .area-size .input-container .form-item input,
+#css-grid-columns-wrapper .area-size .input-container .form-item select,
+#css-grid-rows-wrapper .area-size .input-container .form-item input,
+#css-grid-rows-wrapper .area-size .input-container .form-item select,
+#css-grid-gap-wrapper .area-size .input-container .form-item input,
+#css-grid-gap-wrapper .area-size .input-container .form-item select {
+  width: 100%;
+}

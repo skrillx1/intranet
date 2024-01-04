@@ -1,0 +1,9 @@
+css_grid:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/once

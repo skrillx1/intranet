@@ -1,0 +1,14 @@
+name: Google Calendar Service
+type: module
+description: Provides an integration with Google Calendar and related services.
+core_version_requirement: ^10
+package: Calendars
+configure: google_calendar_service.settings
+
+dependencies:
+  - drupal:inline_entity_form
+
+# Information added by Drupal.org packaging script on 2023-12-16
+version: '3.0.1'
+project: 'google_calendar_service'
+datestamp: 1702769197

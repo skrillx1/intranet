@@ -1,0 +1,11 @@
+entity.gcs_calendar.add_form:
+  route_name: entity.gcs_calendar.add_form
+  title: 'Add Calendar'
+  appears_on:
+    - entity.gcs_calendar.collection
+
+view.gcs_calendar_events.calendar_all_list:
+  route_name: view.gcs_calendar_events.calendar_all_list
+  title: 'View All Events'
+  appears_on:
+    - entity.gcs_calendar.collection

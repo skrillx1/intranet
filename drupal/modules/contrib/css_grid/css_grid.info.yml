@@ -1,0 +1,12 @@
+name: 'CSS Grid'
+type: module
+description: 'Integrates CSS Grid with Layout Builder'
+core_version_requirement: ^8.8 || ^9 || ^10
+dependencies:
+  - drupal:layout_builder
+  - drupal:layout_discovery
+
+# Information added by Drupal.org packaging script on 2023-07-12
+version: '1.0.0-beta7'
+project: 'css_grid'
+datestamp: 1689171429

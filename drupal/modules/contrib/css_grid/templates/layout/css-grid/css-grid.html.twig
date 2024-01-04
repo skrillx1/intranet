@@ -1,0 +1,11 @@
+<section{{ attributes }}>
+
+{% set cells = settings.grid_cells %}
+
+  {% for i in range(1, cells) %}
+    <section {{ region_attributes["content_#{i}"].addClass('layout-inner-content') }}>
+      {{ content["content_#{i}"] }}
+    </section>
+  {% endfor %}
+
+</section>
