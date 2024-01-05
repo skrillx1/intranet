@@ -13,3 +13,21 @@
     margin-top: 20px;
     margin-left: 10px;
 }
+.dashboard-block {
+    margin: auto;
+    width: 70.3%;
+}
+.welcome-user-block {
+    height: 123px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 5px gre
+}
+.costum-block {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 5px gre
+}
