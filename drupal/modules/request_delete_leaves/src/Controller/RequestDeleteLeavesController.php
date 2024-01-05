@@ -71,7 +71,7 @@ class RequestDeleteLeavesController extends ControllerBase {
     foreach ($results as $result) {
       $leaveType = !empty($result->other) ? $result->leave_type . ' - ' . $result->other : $result->leave_type;
       $deleteUrl = Url::fromRoute('request_delete_leaves.delete_request_leaves', ['id' => $result->id]);
-      $deleteLink = Link::fromTextAndUrl($this->t('Delete'), $deleteUrl);
+      $deleteLink = Link::fromTextAndUrl($this->t('<i class="bi bi-trash"></i>'), $deleteUrl);
 
       $rows[] = [
         $result->username,
@@ -106,7 +106,7 @@ class RequestDeleteLeavesController extends ControllerBase {
 
     $button = [
         '#type' => 'link',
-        '#title' => $this->t('Request Leave'),
+        '#title' => $this->t('<i class="bi bi-megaphone"></i>Request Leave'),
         '#url' => Url::fromUri('http://localhost:30080/request-leave'),
         '#attributes' => [
         'class' => ['request-delete-leaves-button'],

@@ -82,7 +82,7 @@ class WorkforceMonitoringController extends ControllerBase {
     $button_markup = $button_link->toRenderable();
     $button_prefix = \Drupal::service('renderer')->renderPlain($button_markup);
 
-    $refreshableContent = '<div id="refreshableContent">' . $button_prefix
+    $refreshableContent = '<div id="refreshableContent">'. $button_prefix
     . '<div class="legend"><strong>Legend:</strong><span class="warning">Warning</span>'
     . '<span class="break1">1st Break</span><span class="break2">2nd Break</span><span class="lunch">Lunch</span></div>'  
     . '<div id="onBreaksContent"><strong>' . $data['todayDate'] . '</strong><br>Employees Over Break: <strong>' . $totalOverBreakRows . '</strong>'

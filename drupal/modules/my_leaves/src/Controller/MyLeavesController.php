@@ -79,11 +79,11 @@ class MyLeavesController extends ControllerBase {
       $deleteUrl = Url::fromUri('http://localhost:30080/delete-leave/' . $result->id);
 
       $editLink = [
-        '#markup' => $edit_disabled ? '<span class="edit-link disabled">' . $this->t('Edit ') . '</span>' : Link::fromTextAndUrl($this->t('Edit'), $editUrl)->toString(),
+        '#markup' => $edit_disabled ? '<span class="edit-link disabled">' . $this->t('<i class="bi bi-pencil"></i>') . '</span>' : Link::fromTextAndUrl($this->t('<i class="bi bi-pencil"></i>'), $editUrl)->toString(),
       ];
       
       $deleteLink = [
-        '#markup' => $delete_disabled ? '<span class="delete-link disabled">' . $this->t('Delete ') . '</span>' : Link::fromTextAndUrl($this->t('Delete'), $deleteUrl)->toString(),
+        '#markup' => $delete_disabled ? '<span class="delete-link disabled">' . $this->t('<i class="bi bi-trash"></i>') . '</span>' : Link::fromTextAndUrl($this->t('<i class="bi bi-trash"></i>'), $deleteUrl)->toString(),
       ];
       
       $rows[] = [
@@ -100,7 +100,7 @@ class MyLeavesController extends ControllerBase {
               ],
               'view' => [ 
                 '#type' => 'link',
-                '#title' => $this->t('View '),
+                '#title' => $this->t('<i class="bi bi-eye"></i>'),
                 '#url' => $viewUrl,
                 '#attributes' => [
                   'class' => ['view-link'],
@@ -126,7 +126,7 @@ class MyLeavesController extends ControllerBase {
     // Create the button element.
     $button = [
         '#type' => 'link',
-        '#title' => $this->t('Request Leave'),
+        '#title' => $this->t('<i class="bi bi-megaphone"></i> Request Leave'),
         '#url' => Url::fromUri('http://localhost:30080/request-leave'),
         '#attributes' => [
         'class' => ['my-leaves-button'],

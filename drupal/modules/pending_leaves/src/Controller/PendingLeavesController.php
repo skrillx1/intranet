@@ -95,7 +95,7 @@ class PendingLeavesController extends ControllerBase {
 
         $button = [
             '#type' => 'link',
-            '#title' => $this->t('Request Leave'),
+            '#title' => $this->t('<i class="bi bi-megaphone"></i>Request Leave'),
             '#url' => Url::fromUri('http://localhost:30080/request-leave'),
             '#attributes' => ['class' => ['pending-leaves-button']],
         ];

@@ -17,6 +17,8 @@
 .in-progress-leaves-container,
 .pending-leaves-container{
   background-color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 .responsive-enabled #leave,
 .responsive-enabled .request-leave {

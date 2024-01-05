@@ -10,6 +10,7 @@ font-size: 16px;
 font-weight: 600;
 color: black;
 display: block;
+border-left: 10px solid #EDF3F7;
 }
 
 .region--primary-menu li a i {
@@ -20,10 +21,10 @@ margin-left: 0;
 margin-bottom: 0;
 padding: 0;
 }
-.region--primary-menu li:hover{
+/* .region--primary-menu li:hover{
   background: rgb(9,9,121);
   background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(255,255,255,0) 6%);
-}
+} */
 .region--primary-menu li a:hover {
     background-color: #FFF;
     color: black;
