@@ -21,13 +21,18 @@ form#workforce-monitoring-account-form{
 #refreshableContent a,
 .over-break-head a{
     text-decoration: none;
-    color: white;
-    padding: 2px 5px;
+    color: #12588A;
+    padding: 2px 10px;
     float: right;
     font-size: 14px;
     border-radius: 6px;
-    background: #12588A;
+    background: white;
     font-weight: 700;
+}
+.over-break-head a:hover,
+#refreshableContent a:hover{
+    color: white;
+    background: #12588A;
 }
 #refreshableContent .legend{
     display: flex;
@@ -39,7 +44,7 @@ form#workforce-monitoring-account-form{
 }
 .legend span{
     margin-right: 3px;
-    padding: 0px 5px;
+    padding: 1px 10px;
     border-radius: 8px;
 }
 .warning{
@@ -60,6 +65,8 @@ form#workforce-monitoring-account-form{
     display: none;
     visibility: hidden;
 }
+
+/* blink red */
 .break-blink{
 	-webkit-animation: pulse 400ms infinite alternate;
 	        animation: pulse 400ms infinite alternate;

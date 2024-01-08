@@ -19,7 +19,7 @@
   }
   #block-sos-userlogin{
     float: right;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
 /* Head Menu */
@@ -43,7 +43,7 @@
   }
   #block-sos-headmenu{
     float: right;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   #block-sos-headmenu span{
     display: none !important;

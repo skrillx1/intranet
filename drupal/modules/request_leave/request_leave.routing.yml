@@ -1,7 +1,0 @@
-request_leave.form:
-  path: '/request-leave'
-  defaults:
-    _form: '\Drupal\request_leave\Form\RequestLeaveForm'
-    _title: 'Request Leave'
-  requirements:
-    _permission: 'access content'

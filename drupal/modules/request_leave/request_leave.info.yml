@@ -1,9 +1,0 @@
-name: 'Request Leave'
-type: module
-description: 'Allows users to request leave.'
-core_version_requirement: ^8 || ^9 || ^10
-package: Custom
-dependencies:
-  - drupal:file
-libraries:
-  - my_leaves/my_leaves

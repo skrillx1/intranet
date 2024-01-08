@@ -89,3 +89,20 @@ span::after{
   background:white;
   overflow:hidden;
 }
+
+/* PaySlip */
+#block-sos-payslip li {
+  padding: 5px 10px;
+}
+#block-sos-payslip ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 50px;
+}
+#block-sos-payslip li:hover{
+  background: white;
+}
+#block-sos-payslip a {
+  text-decoration: none;
+  color: black;
+}

@@ -7,11 +7,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 .sos-main-page{
-  background: #F1F5F9;
-  /* background: url(../svg/content-cover.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+  background: #BBD0E2;
   width:85%; 
   min-height: 953px;
 	float: right;
@@ -63,11 +59,11 @@ body{
 color: black;
 padding: 1%;
 }
-#block-sos-site-branding{
+#block-sos-sitebranding{
   padding: 0;
   margin-left: 50px;
 }
-#block-sos-site-branding img{
+#block-sos-sitebranding img{
   margin: auto;
   width: 294px;
   position: absolute;

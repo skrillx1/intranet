@@ -14,7 +14,6 @@
 .all-leaves-container,
 .my-leaves-container,
 .request-delete-leaves-container,
-.in-progress-leaves-container,
 .pending-leaves-container{
   background-color: white;
   border-radius: 10px;
@@ -24,25 +23,35 @@
 .responsive-enabled .request-leave {
   display: flex;
 }
-.responsive-enabled #leave i,
-.responsive-enabled .request-leave i {
+
+.responsive-enabled i {
   padding: 0px 5px;
   border-radius: 50%;
-  font-size: 17px;
+  font-size: 20px;
   color: white;
   margin-right: 3px;
 }
-.responsive-enabled #leave i.bi.bi-eye,
-.responsive-enabled .request-leave i.bi.bi-eye{
+/* icon enabled */
+.responsive-enabled i.bi.bi-eye{
   background: rgba(5, 105, 204, 0.80);
+
 }
-.responsive-enabled #leave i.bi.bi-check2,
-.responsive-enabled .request-leave i.bi.bi-pencil{
+.responsive-enabled i.bi.bi-pencil,
+.responsive-enabled i.bi.bi-check2{
   background: rgba(67, 139, 106, 0.80);
 }
-.responsive-enabled #leave i.bi.bi-x-lg,
-.responsive-enabled .request-leave  i.bi.bi-trash{
+.responsive-enabled i.bi.bi-trash,
+.responsive-enabled i.bi.bi-x-lg{
   background: rgba(244, 67, 54, 0.80);
+}
+/* icon disabled */
+i.bi.bi-pencil.edit-link,
+i.bi.bi-check2.approve-link{
+  background: rgba(67, 139, 106, 0.25);
+}
+i.bi.bi-trash.delete-link,
+i.bi.bi-x-lg.deny-link{
+  background: rgba(244, 67, 54, 0.25);
 }
 
 .topnav a {
@@ -51,3 +60,7 @@
   text-align: center;
   padding: 5px 10px;
 }
+
+/* color: #438B6A; green
+color: #D35757; red
+color: rgba(5, 105, 204, 0.80); blue */
