@@ -1,0 +1,6 @@
+Ensure Directory Permissions:
+
+Make sure that the destination directory and its parent directories have the correct permissions. You can set the proper permissions using a command like:
+
+
+chmod -R 755 sites/default/files/payslips

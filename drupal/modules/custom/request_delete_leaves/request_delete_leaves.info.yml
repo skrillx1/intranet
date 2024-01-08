@@ -1,0 +1,9 @@
+name: 'Request Delete Leaves'
+type: module
+description: 'List of all user who request to delete their leaves.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:file
+libraries:
+  - my_leaves/my_leaves

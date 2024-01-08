@@ -1,0 +1,7 @@
+name: 'All Leaves'
+type: module
+description: 'Displays leave information from the request_leave_table.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:views

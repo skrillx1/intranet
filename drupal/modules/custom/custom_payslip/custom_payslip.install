@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function custom_payslip_schema() {
+    $schema = array();
+  
+    $schema['custom_payslip'] = array(
+      'description' => 'Table for storing payslip records.',
+      'fields' => array(
+        'id' => array(
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'description' => 'Primary Key: Unique payslip ID.',
+        ),
+        'date' => array(
+          'type' => 'datetime',
+          'mysql_type' => 'DATETIME', 
+          'not null' => TRUE,
+          'description' => 'Date of payslip.',
+        ),
+        'files' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'description' => 'Comma-separated list of file IDs.',
+        ),
+      ),
+      'primary key' => array('id'),
+    );
+  
+    return $schema;
+  }
