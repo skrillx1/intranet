@@ -6,10 +6,10 @@
     font-weight: bold;
 }
 .Dashboard-welcome-user p {
-    margin-left: -400px;
+    margin-left: -250px;
     margin-top: 60px;
 }
-.Dashboard-welcome-user h2 {
+.Dashboard-welcome-user h4 {
     margin-top: 20px;
     margin-left: 10px;
 }
@@ -19,10 +19,10 @@
 }
 .welcome-user-block {
     height: 123px;
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    box-shadow: 2px 2px 5px gre
+    /* background-color: white; */
+    /* border-radius: 10px; */
+    /* margin-bottom: 5px; */
+    /* box-shadow: 2px 2px 5px gre */
 }
 .costum-block {
     background-color: white;
@@ -30,4 +30,14 @@
     border-radius: 10px;
     margin-bottom: 5px;
     box-shadow: 2px 2px 5px gre
+}
+
+.Dashboard-content{
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.Dashboard-content .field-content{
+    font-size: 16px;
+    margin-top: 10px;
 }

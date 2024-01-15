@@ -3,8 +3,8 @@
 /**
  * @file
  * Contains \Drupal\my_leaves\Controller\MyLeavesController.
- * 
- * Submitted by Rustum Goden, a dev intern from Caraga State University Cabadbaran Campus.
+ *
+ * Submitted by Rustum Goden, a dev intern at Caraga State University Cabadbaran Campus.
  */
 
 namespace Drupal\my_leaves\Controller;
@@ -86,11 +86,11 @@ class MyLeavesController extends ControllerBase {
       $deleteUrl = Url::fromUri('http://localhost:30080/delete-leave/' . $result->id);
 
       $editLink = [
-        '#markup' => $edit_disabled ? '<span class="disabled">' . $this->t('<i class="bi bi-pencil edit-link"></i>') . '</span>' : Link::fromTextAndUrl($this->t('<i class="bi bi-pencil"></i>'), $editUrl)->toString(),
+        '#markup' => $edit_disabled ? '<span class="edit disabled">' . $this->t('<i class="bi bi-pencil edit-link"></i> ') . '</span>' : Link::fromTextAndUrl($this->t('<i class="bi bi-pencil"></i>'), $editUrl)->toString(),
       ];
       
       $deleteLink = [
-        '#markup' => $delete_disabled ? '<span class="disabled">' . $this->t('<i class="bi bi-trash delete-link"></i>') . '</span>' : Link::fromTextAndUrl($this->t('<i class="bi bi-trash"></i>'), $deleteUrl)->toString(),
+        '#markup' => $delete_disabled ? '<span class="delete disabled">' . $this->t('<i class="bi bi-trash delete-link"></i> ') . '</span>' : Link::fromTextAndUrl($this->t('<i class="bi bi-trash"></i>'), $deleteUrl)->toString(),
       ];
       
       $rows[] = [
@@ -101,10 +101,10 @@ class MyLeavesController extends ControllerBase {
         $result->status,
         [
           'data' => [
-              '#type' => 'container',
-              '#attributes' => [
-                'class' => ['request-leave'],
-              ],
+            '#type' => 'container',
+            '#attributes' => [
+              'class' => ['my-leave'],
+            ],
               'view' => [ 
                 '#type' => 'link',
                 '#title' => $this->t('<i class="bi bi-eye"></i>'),
@@ -115,8 +115,8 @@ class MyLeavesController extends ControllerBase {
               ],
               'edit' => $editLink,
               'delete' => $deleteLink,
+            ],
           ],
-        ],
       ];
     }
 
@@ -133,7 +133,7 @@ class MyLeavesController extends ControllerBase {
     // Create the button element.
     $button = [
         '#type' => 'link',
-        '#title' => $this->t('<i class="bi bi-megaphone"></i> Request Leave'),
+        '#title' => $this->t('Request Leave'),
         '#url' => Url::fromUri('http://localhost:30080/request-leave'),
         '#attributes' => [
         'class' => ['my-leaves-button'],
@@ -203,17 +203,19 @@ class MyLeavesController extends ControllerBase {
     }
 
     $details = [
+
       '#markup' => $this->t('
-        <p><strong>' . $leaveType . '</strong></p>
-        <p><strong>Status: </strong>' . $result->status . '</p>
-        <p><strong>Duration: </strong>' . $convertedStartDate . ' - ' . $convertedEndDate . '</p>
-        <p><strong>Date Filed: </strong>' . $convertedDateFiled . '</p>
-        <p><strong>Supporting Document: </strong>' . $supportingDocuments . '</p>', 
+      <div class="leave--type"><strong>' . $leaveType . '</strong></div>
+      <div class="leave-stats">' . $result->status . '</div>
+      <div class="leave-duration"><i class="bi bi-clock-fill"></i><strong>Duration </strong>'.'<p class="leave-date">' .$convertedStartDate . ' - ' . $convertedEndDate .'</p>'.'</div>
+      <div class="leave-date-filed"><i class="bi bi-calendar-week-fill"></i><strong>Date Filed </strong>' . '<p class="leave-date">' . $convertedDateFiled .'</p>' . '</div>
+      <div class="leave-support-docs"><strong>Supporting Document </strong>' . $supportingDocuments . '</div>',
       ),
     ];
 
-    $output = [
-      '#theme' => 'item_list',
+    $output = [ 
+    '#theme' => 'item_list',
+    '#attributes' => ['class' => ['view-leave']],
       '#items' => $details,
       '#cache' => [
         'tags' => $cache_tags,

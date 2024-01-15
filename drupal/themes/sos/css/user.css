@@ -22,7 +22,7 @@
   }
   .layout__region--content{
     margin: auto;
-    background: linear-gradient(0deg, #FFFFFF 50%, #0027FF 50%);
+    background: linear-gradient(0deg,#FFFFFF 50%,#2167A9 50%);
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
   }
@@ -62,3 +62,59 @@
   .layout--fourcol-section .layout__region {
     border-radius: unset;
   }
+
+  /* Change password & Profile Photo */
+  #user-form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: auto;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  #user-form #edit-account{
+    flex: 0 0 100%;
+    order: 2;
+  }
+  #user-form #edit-user-picture-wrapper{
+    flex: 0 0 100%;
+    order: 1;
+  }
+  #user-form #edit-actions {
+    flex: 0 0 100%;
+    order: 3;
+    padding: 0px 50px;
+  }
+  #user-form .form-managed-file{
+  display: grid;
+  justify-content: center;
+}
+ #user-form .form-submit{
+  color: white;
+  background: #0095ff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  font-weight: 500;
+}
+#user-form .js-form-item-current-pass,
+#user-form .password-parent,
+#user-form .confirm-parent{
+  display: flex;
+    flex-wrap: wrap;
+}
+#user-form .js-form-item-current-pass label,
+#user-form .js-form-item-current-pass #edit-current-pass,
+#user-form .password-parent label,
+#user-form .password-parent #edit-pass-pass1,
+#user-form .password-parent .password-strength,
+#user-form .confirm-parent label,
+#user-form .confirm-parent #edit-pass-pass2{
+  flex: 0 0 100%;
+}
+#user-form #edit-submit{
+  width: 100%;
+}

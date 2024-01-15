@@ -1,3 +1,4 @@
+
 .all-leaves-container .all-leaves-button,
  .my-leaves-container .my-leaves-button,
  .in-progress-leaves-container .in-progress-leaves-button,
@@ -19,8 +20,8 @@
   border-radius: 10px;
   padding: 10px;
 }
-.responsive-enabled #leave,
-.responsive-enabled .request-leave {
+.responsive-enabled .my-leave,
+.responsive-enabled .pending-leave {
   display: flex;
 }
 
@@ -60,7 +61,41 @@ i.bi.bi-x-lg.deny-link{
   text-align: center;
   padding: 5px 10px;
 }
+.request-leave-form{
+  display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.request-leave-form .form-disabled,
+.request-leave-form .js-form-item-leave-type,
+.request-leave-form #ajax-wrapper{
+  flex: 0 0 100%;
+  margin-top: 10px;
+}
+.request-leave-form .js-form-item-end-date,
+.request-leave-form .js-form-item-start-date{
+  flex: 0 0 50%;
+  margin-top: 10px;
+}
+.request-leave-form .form-submit{
+  text-decoration: none;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+}
 
-/* color: #438B6A; green
-color: #D35757; red
-color: rgba(5, 105, 204, 0.80); blue */
+
+/* view leaves  */
+
+.view-leave{
+  background: white;
+    padding: 50px;
+    list-style-type: none;
+    border-radius: 10px;
+}

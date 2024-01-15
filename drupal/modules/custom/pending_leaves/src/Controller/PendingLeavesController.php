@@ -2,9 +2,9 @@
 
 /**
  * @file
- * Drupal\pending_leaves\Controller\PendingLeavesController.
- * 
- * Submitted by Rustum Goden, a dev intern from Caraga State University Cabadbaran Campus.
+ * Contains \Drupal\pending_leaves\Controller\PendingLeavesController.
+ *
+ * Submitted by Rustum Goden, a dev intern at Caraga State University Cabadbaran Campus.
  */
 
 namespace Drupal\pending_leaves\Controller;
@@ -46,9 +46,19 @@ class PendingLeavesController extends ControllerBase {
             'Action',
         ];
 
+        // Get the current user.
+        $current_user = \Drupal::currentUser();
+
+        // Load the user entity to get the Employee ID field value.
+        $user = \Drupal\user\Entity\User::load($current_user->id());
+
+        // Get the Employee ID field value.
+        $current_account_department = $user->get('field_account')->first()->getValue()['value'];
+
         $query = $this->database->select('request_leave_table', 'rlt')
-            ->fields('rlt', ['id', 'start_date', 'end_date', 'date_filed', 'leave_type', 'status', 'other', 'username'])
+            ->fields('rlt', ['id', 'start_date', 'end_date', 'date_filed', 'leave_type', 'status', 'other', 'username', 'account_department'])
             ->condition('status', 'Pending', '=')
+            ->condition('account_department', $current_account_department, '=')
             ->addTag('request_leave_table_cache_tag');
         $results = $query->execute()->fetchAll();
 
@@ -57,12 +67,11 @@ class PendingLeavesController extends ControllerBase {
             $leaveType = !empty($result->other) ? $result->leave_type . ' - ' . $result->other : $result->leave_type;
             $viewUrl = Url::fromRoute('pending_leaves.view_leave', ['id' => $result->id]);
 
-            $accept_disabled = $deny_disabled = $result->status == 'Approved' || $result->status == 'Denied';
             $acceptUrl = Url::fromRoute('pending_leaves.accept_leave', ['id' => $result->id]);
             $denyUrl = Url::fromRoute('pending_leaves.deny_leave', ['id' => $result->id]);
 
-            $acceptLink = ['#markup' => $accept_disabled ? $this->t('<span class="accept-link disabled"><i class="bi bi-check2"></i></span>') : Link::fromTextAndUrl($this->t('<i class="bi bi-check2"></i>'), $acceptUrl)->toString()];
-            $denyLink = ['#markup' => $deny_disabled ? $this->t('<span class="deny-link disabled"><i class="bi bi-x-lg"></i></span>') : Link::fromTextAndUrl($this->t('<i class="bi bi-x-lg"></i>'), $denyUrl)->toString()];
+            $acceptLink = ['#markup' => Link::fromTextAndUrl($this->t('<i class="bi bi-check2"></i>'), $acceptUrl)->toString()];
+            $denyLink = ['#markup' => Link::fromTextAndUrl($this->t('<i class="bi bi-x-lg"></i>'), $denyUrl)->toString()];
 
             $rows[] = [
                 $result->username,
@@ -74,8 +83,9 @@ class PendingLeavesController extends ControllerBase {
                 [
                     'data' => [
                         '#type' => 'container',
-                        'actions' => [
-                            '#type' => 'container',
+                        '#attributes' => [
+                            'class' => ['pending-leave'],
+                          ],
                             'view' => [
                                 '#type' => 'link',
                                 '#title' => $this->t('<i class="bi bi-eye"></i>'),
@@ -86,7 +96,7 @@ class PendingLeavesController extends ControllerBase {
                             'deny' => $denyLink,
                         ],
                     ],
-                ],
+               
             ];
         }
 
@@ -100,17 +110,9 @@ class PendingLeavesController extends ControllerBase {
             ],
         ];
 
-        $button = [
-            '#type' => 'link',
-            '#title' => $this->t('<i class="bi bi-megaphone"></i> Request Leave'),
-            '#url' => Url::fromUri('http://localhost:30080/request-leave'),
-            '#attributes' => ['class' => ['pending-leaves-button']],
-        ];
-
         $table_with_button = [
             '#type' => 'container',
             '#attributes' => ['class' => ['pending-leaves-container']],
-            'button' => $button,
             'table' => $table,
         ];
 
@@ -152,21 +154,23 @@ class PendingLeavesController extends ControllerBase {
 
         $details = [
             '#markup' => $this->t('
-                <p><strong>' . $leaveType . '</strong></p>
-                <p><strong>Status: </strong>' . $result->status . '</p>
-                <p><strong>Duration: </strong>' . $convertedStartDate . ' - ' . $convertedEndDate . '</p>
-                <p><strong>Date Filed: </strong>' . $convertedDateFiled . '</p>
-                <p><strong>Supporting Document: </strong>' . $supportingDocuments . '</p>',
+            <div class="leave--type"><strong>' . $leaveType . '</strong></div>
+            <div class="leave-stats">' . $result->status . '</div>
+            <div class="leave-duration"><i class="bi bi-clock-fill"></i><strong>Duration </strong>'.'<p class="leave-date">' .$convertedStartDate . ' - ' . $convertedEndDate .'</p>'.'</div>
+            <div class="leave-date-filed"><i class="bi bi-calendar-week-fill"></i><strong>Date Filed </strong>' . '<p class="leave-date">' . $convertedDateFiled .'</p>' . '</div>
+            <div class="leave-support-docs"><strong>Supporting Document </strong>' . $supportingDocuments . '</div>',
             ),
         ];
 
         $output = [
             '#theme' => 'item_list',
+            '#attributes' => ['class' => ['view-leave']],
             '#items' => $details,
             '#cache' => [
                 'tags' => $cache_tags,
                 'max-age' => 0,
             ],
+
         ];
 
         $output['back_link'] = [

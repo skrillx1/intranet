@@ -14,7 +14,7 @@ use DateTime;
  */
 
 class WorkforceMonitoringController extends ControllerBase {
-
+  
   /**
    * Returns the content for the workforce monitoring page.
    *
@@ -41,14 +41,18 @@ class WorkforceMonitoringController extends ControllerBase {
     $button_prefix = \Drupal::service('renderer')->renderPlain($button_markup);
 
     return [
+      'data' => [
+      '#type' => 'container',
+      '#attributes' => ['id' => ['workforce-monitor']],
       'date_form' => $dateForm,
       '#markup' => $this->t(
-        '<div class="over-break-head">' . $button_prefix . '<br><h3>' . $newFormattedDate . '</h3><h4>Over-Break Logs</h4>Employees Over Break: <strong>' . $totalOverBreakRows . '</strong></div>' . $overBreakTableMarkup .
+        '<div class="over-break-head">' . $button_prefix . '<h3>' . $newFormattedDate . '</h3><h4>Over-Break Logs</h4>Employees Over Break: <strong>' . $totalOverBreakRows . '</strong></div>' . $overBreakTableMarkup .
         '<div class="all-employee"><br><h4>Logs Summary</h4>Total Number of Employees Logged In: <strong>' . $totalRows . '</strong> </div>' . $mainTableMarkup
       ),
       '#cache' => [
         'max-age' => 0,
       ],
+    ],
     ];
   }
 
@@ -90,6 +94,9 @@ class WorkforceMonitoringController extends ControllerBase {
     . '</div></div>';
 
     return [
+      'data' => [
+        '#type' => 'container',
+        '#attributes' => ['id' => ['workforce-monitor']],
       'account_form' => $AccountForm,
       '#markup' => $refreshableContent,
       '#attached' => [
@@ -99,6 +106,7 @@ class WorkforceMonitoringController extends ControllerBase {
       ],
       '#cache' => [
         'max-age' => 0,
+      ],
       ],
     ];
   }

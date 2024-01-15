@@ -15,20 +15,3 @@ all_leaves.view_leave:
   requirements:
     _permission: 'access content'
 
-
-all_leaves.approve_leave:
-  path: '/approve-leave/{id}'
-  defaults:
-    _controller: '\Drupal\all_leaves\Controller\AllLeavesController::approveLeave'
-    _title: 'Approve Leave'
-  requirements:
-    _permission: 'access content'
-
-
-all_leaves.deny_leave:
-  path: '/deny-leave/{id}'
-  defaults:
-    _controller: '\Drupal\all_leaves\Controller\AllLeavesController::denyLeave'
-    _title: 'Deny Leave'
-  requirements:
-    _permission: 'access content'

@@ -132,8 +132,9 @@ function inline_entity_form_reference_form(array $reference_form, FormStateInter
   $reference_form['#element_validate'][] = 'inline_entity_form_reference_form_validate';
   $reference_form['#ief_element_submit'][] = 'inline_entity_form_reference_form_submit';
 
-  // Allow other modules to alter the form.
+  // Allow other modules and themes to alter the form.
   \Drupal::moduleHandler()->alter('inline_entity_form_reference_form', $reference_form, $form_state);
+  \Drupal::theme()->alter('inline_entity_form_reference_form', $reference_form, $form_state);
 
   return $reference_form;
 }

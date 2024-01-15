@@ -1,0 +1,8 @@
+name: 'Payslip'
+type: module
+description: 'A module for payslip files.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+version: 1.0
+dependencies:
+  - drupal:views

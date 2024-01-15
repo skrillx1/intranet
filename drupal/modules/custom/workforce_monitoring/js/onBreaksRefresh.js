@@ -19,7 +19,7 @@
             closestTR.css("background-color", "#FFFDC9");
           
           } else if (text.indexOf('2ND BREAK') === 0) {
-            closestTR.css("background-color", "#FED133");
+            closestTR.css("background-color", "#FFE7A0");
          
           } else if (text.indexOf('LUNCH') === 0) {
             closestTR.css("background-color", "#D6FFE6");

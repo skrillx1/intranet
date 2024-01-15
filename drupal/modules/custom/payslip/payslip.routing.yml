@@ -1,0 +1,34 @@
+payslip.form:
+  path: '/payslip-upload'
+  defaults:
+    _form: '\Drupal\payslip\Form\PayslipForm'
+    _title: 'Payslip Upload Form'
+  requirements:
+    _permission: 'access content'
+
+
+payslip.payslip_controller:
+  path: '/payslip-files'
+  defaults:
+    _controller: '\Drupal\payslip\Controller\PayslipController::viewPayslipFiles'
+    _title: 'Payslip Files'
+  requirements:
+    _permission: 'access content'
+
+
+payslip.file_content:
+  path: '/payslip/file-content/{filename}'
+  defaults:
+    _controller: '\Drupal\payslip\Controller\PayslipController::viewPayslipFileContent'
+    _title: 'Payslip File Content'
+  requirements:
+    _permission: 'access content'
+
+
+# payslip.edit_file:
+#   path: '/payslip/edit-file/{filename}'
+#   defaults:
+#     _controller: '\Drupal\payslip\Controller\PayslipController::editPayslipFile'
+#     _title: 'Edit Payslip File'
+#   requirements:
+#     _permission: 'access content'

@@ -3,7 +3,17 @@
   width: 100%;
   margin-top: 120px;
 }
-.region--primary-menu li a {
+.region--secondary-menu{
+  width: 100%;
+  margin-top: 10px;
+  border-top: 1px solid black;
+}
+.region--primary-menu nav,
+.region--secondary-menu nav{
+  padding: unset;
+}
+.region--primary-menu li a,
+.region--secondary-menu li a{
 padding: 8px 8px 8px 35px;
 text-decoration: none;
 font-size: 16px;
@@ -13,28 +23,35 @@ display: block;
 border-left: 10px solid #EDF3F7;
 }
 
-.region--primary-menu li a i {
+.region--primary-menu li a i,
+.region--secondary-menu li a i{
   font-size: 20px;
 }
-.region--primary-menu ul{
+.region--primary-menu ul,
+.region--secondary-menu ul{
 margin-left: 0;
 margin-bottom: 0;
 padding: 0;
 }
-/* .region--primary-menu li:hover{
-  background: rgb(9,9,121);
-  background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(255,255,255,0) 6%);
-} */
-.region--primary-menu li a:hover {
+.primary_menu .icon-link.icon-link-hover:hover,
+.dropdown-btn:hover {
+  background-color: #FFF;
+  color: black;
+  border-left: 10px solid #0E4C87;
+}
+/* .region--primary-menu ul li a:hover 
+.region--secondary-menu ul li a:hover{
     background-color: #FFF;
     color: black;
-    border-left:10px solid #00f;
-}
+    border-left:10px solid #0E4C87;
+} */
 span::after{
     content: '\a';
     white-space: pre;
 }
-
+#block-sos-main-menu{
+  border-top: 1px solid black;
+}
 #block-sos-mainnavigation2 svg,
 #block-sos-main-menu svg {
   padding-left: 30px;
@@ -63,29 +80,31 @@ span::after{
 }
  /* leave_page */
  #block-sos-hrleavepage ul,
- #block-sos-userleavepage ul,
- #block-sos-managerleavepage ul{
+ #block-sos-userleaves ul,
+ #block-sos-manageleaves ul{
   display: flex;
   list-style-type: none;
   padding-left: 50px;
+  margin: 10px 0px 0px 0px;
 }
-#block-sos-hrleavepage li,
-#block-sos-userleavepage li,
-#block-sos-managerleavepage li{
-  padding: 5px 10px;
-}
-#block-sos-hrleavepage li:hover,
-#block-sos-userleavepage li:hover
-#block-sos-managerleavepage li:hover{
-  background: white;
-}
+
 #block-sos-hrleavepage li a,
-#block-sos-userleavepage li a,
-#block-sos-managerleavepage li a{
+#block-sos-userleaves li a,
+#block-sos-manageleaves li a{
+  padding: 5px 10px;
   text-decoration: none;
   color: black;
 }
-.active {
+#block-sos-hrleavepage li a:hover,
+#block-sos-userleaves li a:hover,
+#block-sos-manageleaves li a:hover{
+  background: white;
+}
+
+#block-sos-hrleavepage .is-active,
+#block-sos-userleaves .is-active,
+#block-sos-manageleaves .is-active {
+
   background:white;
   overflow:hidden;
 }

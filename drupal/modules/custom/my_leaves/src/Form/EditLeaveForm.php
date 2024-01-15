@@ -2,9 +2,9 @@
 
 /**
  * @file
- * contains \Drupal\my_leaves\Form\EditLeaveForm
- * 
- * Submitted by Rustum Goden, a dev intern from Caraga State University Cabadbaran Campus.
+ * Contains \Drupal\my_leaves\Form\MyLeavesForm.
+ *
+ * Submitted by Rustum Goden, a dev intern at Caraga State University Cabadbaran Campus.
  */
 
 namespace Drupal\my_leaves\Form;

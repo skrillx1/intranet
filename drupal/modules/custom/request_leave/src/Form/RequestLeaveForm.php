@@ -4,7 +4,7 @@
  * @file
  * Contains \Drupal\request_leave\Form\RequestLeaveForm.
  * 
- * Submitted by Rustum Goden, a dev intern from Caraga State University Cabadbaran Campus.
+ * Submitted by Rustum Goden, a dev intern at Caraga State University Cabadbaran Campus.
  */
 
 namespace Drupal\request_leave\Form;
@@ -35,6 +35,11 @@ class RequestLeaveForm extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['#attributes']['enctype'] = 'multipart/form-data';
+
+    $form['messages'] = [
+      '#markup' => '<div id="leave-messages">Leave request with less than two-week notice will result in Leave Without Pay (LWOP).</div>',
+    ];
+
     $form['date_filed'] = [
         '#type' => 'date',
         '#title' => $this->t('Date Filed'),
@@ -47,6 +52,7 @@ class RequestLeaveForm extends FormBase {
       '#type' => 'date',
       '#title' => $this->t('Start Date'),
       '#required' => TRUE,
+      '#element_validate' => ['::validateStartDate'],
     ];
 
     $form['end_date'] = [
@@ -110,9 +116,31 @@ class RequestLeaveForm extends FormBase {
     return $form;
   }
 
+  public function validateStartDate(array &$element, FormStateInterface $form_state, &$complete_form) {
+    $date_filed = new \DateTime($form_state->getValue('date_filed'));
+    $start_date = new \DateTime($form_state->getValue('start_date'));
+
+    // Calculate the difference in days.
+    $interval = $date_filed->diff($start_date);
+    $days_difference = $interval->days;
+
+    // If the start_date is less than 2 weeks from date_filed, set leave_type to "Leave Without Pay".
+    if ($days_difference < 14) {
+      $form_state->setValue('leave_type', 'Leave Without Pay');
+    }
+  }
+
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
     $username = \Drupal::currentUser()->getAccountName();
+    // Get the current user.
+    $current_user = \Drupal::currentUser();
+
+    // Load the user entity to get the Employee ID field value.
+    $user = \Drupal\user\Entity\User::load($current_user->id());
+
+    // Get the Employee ID field value.
+    $account_department = $user->get('field_account')->first()->getValue()['value'];
   
     $leave_type = $values['leave_type'];
     $other = isset($values['other']) ? $values['other'] : '';
@@ -145,6 +173,7 @@ class RequestLeaveForm extends FormBase {
         'supporting_documents' => $file_id,
         'status' => $values['status'],
         'username' => $username,
+        'account_department' => $account_department,
       ])
       ->execute();
   

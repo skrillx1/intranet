@@ -1,0 +1,81 @@
+Description: Dev OJT
+Gmail: jomerluague.sos@gmail.com
+Username : Jomer Luague
+Password: Abcde12345**
+
+Credentials: 
+username: J.Luague
+password: default000
+
+"You Get Something & You Make Something"
+Servant Leader
+
+free unli Coffee (niiiicccceeeeee)
+Workforce@123
+wordpress: !1@A2b#c3d4e$5%
+mysql: my-secret-pw
+mysql -uroot -p
+create database <tag>
+show databases;
+
+(Gitlab - Drupal - )
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub
+git clone ssh://git@repo.ecomia.com:32022/ecomia/docker-environment.git
+cd docker-environment/
+git branch
+git checkout -b docker-<user>
+git branch
+cd laborpool-drupal/
+mkdir intranet
+cp -R laborpool-drupal/ intranet/.
+cp -R laborpool-drupal intranet
+cp -R laborpool-drupal/[.a-z]* intranet/.
+cp -R laborpool-drupal/.env.dev intranet/.
+sudo chmod 666 /var/run/docker.sock
+----------------------------------------------
+docker compose --version
+docker network list
+docker compose up -d --build
+docker compose down
+sudo chown jomer:jomer drupal -R
+git status
+git add .
+git commit -m "initial commit"
+git push origin master
+git checkout -b develop
+
+
+W:\2023-Projects\Laborpool\laborpool-drupal-theme
+docker pull wordpress
+docker run --name some-wordpress -v ~/wordpress-files:/var/www/html -p 80:80 -d wordpress
+
+docker pull mysql
+docker run --name some-mysql --hostname=mysql -v ~/mysql:/var/lib/mysql --network-alias=mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+
+
+<div class=" " > {{ node.field_appraisal_department.value|raw}}</div>
+<div class='appraisal'>
+    <div class="increase_form">
+        {{ node.field_appraisal_title.value|raw}}
+        {{ node.field_emp_profile.value|raw}}
+        {{ node.field_appraisal_department.value|raw}}
+        {{ node.field_appraisal_accomplishment.value|raw}}
+    </div>
+</div>
+<div class="last-name"><a href="/user/8/edit" data-drupal-link-system-path="user/8/edit">Edit</a> </div>
+user_picture
+  <div class="fullname" {{ node.field_display_name_full_name_.value|raw}}</div>
+  {# <div class="id-profile"> 
+  <img src="{{ file_url(node.user_picture['#items'].entity.uri.value) }}" alt="ID Profile">
+ </div> #}
+{% include "field.html.twig" %}
+<img src="{{ file_url(node.user_picture.entity.fileurl)}}" alt="ID Profile">
+image.html.twig
+region--content.html.twig
+<img src="{{ directory }}/images/logo1.png" alt="test-slide-1"/>
+    <img src="{{ directory }}/images/logo2.png" alt="test-slide-2"/>
+
+manager - my leaves | pending leaves
+HR - my Leaves | all Leaves | delete Request | In progress
+user - my leaves

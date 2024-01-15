@@ -1,0 +1,22 @@
+#block-sos-tabs-2 ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#block-sos-tabs-2 ul li {
+    margin: 15px 5px 0px 0px;
+    list-style-type: none;
+}
+#block-sos-tabs-2 ul li a {
+    text-decoration: none;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+}
+#block-sos-tabs-2 ul li a:hover,
+#block-sos-tabs-2 ul li .is-active{
+    color: white;
+    background: #12588A;
+}
