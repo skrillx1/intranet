@@ -1,8 +1,8 @@
 # Intranet // Authors: OJT batch 2023 - 2024
 
 requirements for windows:
-- docker desktop 4.26.1
-- wsl 2 ubuntu 22.04.3
+- docker desktop 4.26.1 or latest
+- wsl 2 ubuntu 22.04.3 or latest
 
 Git global setup / wsl
 - git config --global user.name "Your Name"     // git config --global user.name "Jomer Luague"
