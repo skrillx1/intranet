@@ -1,6 +1,5 @@
-# Intranet // Authors: OJT batch 2023 - 2024
-
-## Author
+# Intranet
+## Author: OJT batch 2023 - 2024
 **Michael Tisbe | Jomer Luague | Rustum Goden**
 
 requirements for windows:
