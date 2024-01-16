@@ -31,8 +31,8 @@ Step 3: wsl
 
 Step 4: SQLyog
 ** Configuration **
-Host address: localhost
 
+Host address: localhost
 
 username: root
 
