@@ -12,7 +12,7 @@ Step 1: wsl
 $ sudo chmod 666 /var/run/docker.sock
 
 Step 2: docker
-# Install composer on docker drupal
+// Install composer on docker drupal
 // docker drupal terminal - bash 
 - Composer install
 
