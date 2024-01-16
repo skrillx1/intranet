@@ -8,8 +8,8 @@ Step 1: wsl
 - $ git clone ssh://git@repo.ecomia.com:32022/jomer/intranet.git
 - $ docker compose up -d --build
 
-// if there some errors found during docker compose up, run this on wsl
-$ sudo chmod 666 /var/run/docker.sock
+- $ sudo chmod 666 /var/run/docker.sock
+// if there some errors found during build, run this on wsl
 
 Step 2: docker
 // Install composer on docker drupal
