@@ -8,10 +8,8 @@ requirements for windows:
 - SQLyog
 
 ### Git global setup / wsl
-- git config --global user.name "Your Name"     
-<!-- git config --global user.name "Jomer Luague" -->
-- git config --global user.email "Your Email"   
-<!-- git config --global user.email "jomerluague.sos@gmail.com" -->
+- git config --global user.name "Your Name"  //git config --global user.name "Jomer Luague" 
+- git config --global user.email "Your Email"  //git config --global user.email "jomerluague.sos@gmail.com"
 
 Step 1: wsl
 - $ git clone ssh://git@repo.ecomia.com:32022/jomer/intranet.git
@@ -29,6 +27,7 @@ Step 3: wsl
 - cd intranet/drupal
 - chmod a+w sites/default/files
 - chmod a+w sites/default/settings.php
+- chmod go-w sites/default/settings.php
 
 Step 4: SQLyog
 - import Database.sql
