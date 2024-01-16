@@ -20,12 +20,13 @@ Step 1: wsl
 <!-- if there some errors found during build, run this on wsl -->
 - $ sudo chmod 666 /var/run/docker.sock
 
-Step 2: docker
+Step 2: docker drupal
 <!-- Install composer on docker drupal -->
 <!-- docker drupal terminal - bash -->
 - Composer install
 
 Step 3: wsl
+- cd intranet/drupal
 - chmod a+w sites/default/files
 - chmod a+w sites/default/settings.php
 
