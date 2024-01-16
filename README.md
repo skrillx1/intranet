@@ -1,7 +1,7 @@
 # Intranet // Authors: OJT batch 2023 - 2024
 
 ## Author
-**[Michael Tisbe | Jomer Luague | Rustum Goden]**
+**Michael Tisbe | Jomer Luague | Rustum Goden**
 
 requirements for windows:
 - docker desktop 4.26.1 or latest
