@@ -15,10 +15,10 @@ requirements for windows:
 
 Step 1: wsl
 - $ git clone ssh://git@repo.ecomia.com:32022/jomer/intranet.git
+- cd intranet
 - $ docker compose up -d --build
-
-- $ sudo chmod 666 /var/run/docker.sock
 <!-- if there some errors found during build, run this on wsl -->
+- $ sudo chmod 666 /var/run/docker.sock
 
 Step 2: docker
 <!-- Install composer on docker drupal -->
