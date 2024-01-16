@@ -205,11 +205,11 @@ class MyLeavesController extends ControllerBase {
     $details = [
 
       '#markup' => $this->t('
-      <div class="leave--type"><strong>' . $leaveType . '</strong></div>
-      <div class="leave-stats">' . $result->status . '</div>
-      <div class="leave-duration"><i class="bi bi-clock-fill"></i><strong>Duration </strong>'.'<p class="leave-date">' .$convertedStartDate . ' - ' . $convertedEndDate .'</p>'.'</div>
-      <div class="leave-date-filed"><i class="bi bi-calendar-week-fill"></i><strong>Date Filed </strong>' . '<p class="leave-date">' . $convertedDateFiled .'</p>' . '</div>
-      <div class="leave-support-docs"><strong>Supporting Document </strong>' . $supportingDocuments . '</div>',
+            <p class="leave-stats">' . $result->status . '</p>
+            <div class="leave--type"><strong>' . $leaveType . '</strong></div>
+            <div class="leave-duration"><i class="bi bi-clock-fill"></i><span><strong>Duration</strong>'.'<p class="leave-date">' .$convertedStartDate . ' - ' . $convertedEndDate .'</p>'.'</span></div>
+            <div class="leave-date-filed"><i class="bi bi-calendar-week-fill"></i> <span><strong>Date Filed </strong>' . '<p class="leave-date">' . $convertedDateFiled .'</p>' . '</span></div>
+            <div class="leave-support-docs"><strong>Supporting Documents </strong>' . $supportingDocuments . '</div>',
       ),
     ];
 
