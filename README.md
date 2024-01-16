@@ -5,6 +5,7 @@
 requirements for windows:
 - docker desktop 4.26.1 or latest
 - wsl 2 ubuntu 22.04.3 or latest
+- SQLyog
 
 ### Git global setup / wsl
 - git config --global user.name "Your Name"     
@@ -27,4 +28,8 @@ Step 2: docker
 Step 3: wsl
 - chmod a+w sites/default/files
 - chmod a+w sites/default/settings.php
+
+Step 4: SQLyog
+- import Database.sql
+
 
