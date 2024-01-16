@@ -31,7 +31,7 @@ Step 3: wsl
 
 Step 4: SQLyog
 ** Configuration **
-Host address: localhost
+\n Host address: localhost
 username: root
 password: LfS59aJ69bGungkr
 port: 10001
