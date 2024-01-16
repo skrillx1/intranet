@@ -30,7 +30,8 @@ Step 3: wsl
 - chmod go-w sites/default/settings.php
 
 Step 4: SQLyog
-** Configuration **
+
+**Configuration**
 
 **Host address:** localhost
 
