@@ -30,6 +30,11 @@ Step 3: wsl
 - chmod go-w sites/default/settings.php
 
 Step 4: SQLyog
+** Configuration **
+Host address: localhost
+username: root
+password: LfS59aJ69bGungkr
+port: 10001
 - import Database.sql
 
 
