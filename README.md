@@ -8,7 +8,7 @@ requirements for windows:
 - SQLyog
 
 ### Git global setup / wsl
-
+> this during first setup for Git init
 - git config --global user.name "Your Name"  
 > note: git config --global user.name "Jomer Luague"
 - git config --global user.email "Your Email"  
