@@ -2,7 +2,8 @@
 ## Author: OJT batch 2023 - 2024
 **Michael Tisbe | Jomer Luague | Rustum Goden**
 
-requirements for windows:
+requirements for windows: install
+
 - docker desktop 4.26.1 or latest
 - wsl 2 ubuntu 22.04.3 or latest
 - SQLyog
