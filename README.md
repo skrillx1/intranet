@@ -7,8 +7,10 @@ requirements for windows:
 - wsl 2 ubuntu 22.04.3 or latest
 
 ### Git global setup / wsl
-- git config --global user.name "Your Name"     <!-- git config --global user.name "Jomer Luague" -->
-- git config --global user.email "Your Email"   <!-- git config --global user.email "jomerluague.sos@gmail.com" -->
+- git config --global user.name "Your Name"     
+<!-- git config --global user.name "Jomer Luague" -->
+- git config --global user.email "Your Email"   
+<!-- git config --global user.email "jomerluague.sos@gmail.com" -->
 
 Step 1: wsl
 - $ git clone ssh://git@repo.ecomia.com:32022/jomer/intranet.git
